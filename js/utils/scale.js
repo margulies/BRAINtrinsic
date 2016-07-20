@@ -8,23 +8,13 @@ var metric = false;
 var metricQuantileScale;
 var matricValues;
 var colorMap = {
-    'Frontal' : '#2ca02c',
-    'Parietal': '#9467bd',
-    'Occipital':'#d62728',
-    'Subcortical': '#1f77b4' ,
-    'Temporal': '#ff7f0e',
-    'brainstem' : '#7f7f7f',
-    'hippocampus' : '#d62728',
-    'thalamus': '#1f77b4',
-    'putamen' : '#2ca02c',
-    'precuneus' : '#9467bd',
-    'superiorParietal':'#e377c2',
-    'Superior frontal Cortex':'#bcbd22',
-    'Paracentral':'#17becf',
-    'Pallidum':'#8c564b',
-    'Cingulate':'#ff7f0e',
-    'Caudate':'#ad494a'
-
+    'MOT' :"#4682B4", 
+    'SAL': "#C43AFA", 
+    'DAN': "#00760E", 
+    'FPN': "#EA9422", 
+    'DMN': "#CD3E4E", 
+    'LIM' :"#DCF8A4", 
+    'VIS' :"#781286"
 }
 
 scaleColorGroup = function (group, nodeIndex) {

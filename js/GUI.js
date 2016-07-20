@@ -243,14 +243,15 @@ setNodeInfoPanel = function (regionName, index){
     panel.selectAll("p").remove();
 
 
-    var connectionRow = getConnectionMatrixRow(index);
+    //var connectionRow = getConnectionMatrixRow(index);
 
-    var nodalStrength = computeNodalStrength(connectionRow);
+    //var nodalStrength = computeNodalStrength(connectionRow);
 
-    nodalStrength = Math.floor(nodalStrength*100)/100;
+    //nodalStrength = Math.floor(nodalStrength*100)/100;
 
     var para = document.createElement("p");
-    var node = document.createTextNode(index + " " + regionName + " " + nodalStrength);
+    var node = document.createTextNode(" x=" + centroids[index].anatomy.x + " y=" + centroids[index].anatomy.y 
+                                       + " z=" + centroids[index].anatomy.z);// index + " " + regionName + " " + nodalStrength);
     /*panel.appendChild(para)
      .appendChild(node);*/
 
@@ -261,7 +262,7 @@ setNodeInfoPanel = function (regionName, index){
 
 
 addThresholdSlider = function (){
-
+/*
     var menu = d3.select("#edgeInfoPanel");
     menu.append("label")
         .attr("for", "thresholdSlider")
@@ -270,11 +271,11 @@ addThresholdSlider = function (){
 
     menu.append("input")
         .attr("type", "range")
-        .attr("value", getMaximumWeight()/2)
+        //.attr("value", getMaximumWeight()/2)
         .attr("id", "thresholdSlider")
         .attr("min","0")
-        .attr("max", getMaximumWeight())
-        .attr("step",getMaximumWeight()/1000)
+        //.attr("max", getMaximumWeight())
+        //.attr("step",getMaximumWeight()/1000)
         .on("change", function () {
 
             var slider = document.getElementById("thresholdSlider");
@@ -288,11 +289,11 @@ addThresholdSlider = function (){
         .attr("for","thresholdSlider")
         .attr("id", "thresholdOutput");
 
-    setThreshold(Math.floor(getMaximumWeight()*100/2)/100);
+    //setThreshold(Math.floor(getMaximumWeight()*100/2)/100);
 
     document.getElementById("thresholdOutput").value = getThreshold();
 
-
+*/
 };
 
 
@@ -549,7 +550,7 @@ removeThresholdSlider = function(){
 };
 
 addModalityButton = function () {
-
+/*
     var menu = d3.select("#upload");
 
     menu.append("button")
@@ -563,7 +564,7 @@ addModalityButton = function () {
             changeModality(this.checked);
             updateScene();
         });
-
+*/
 }
 
 
@@ -594,7 +595,7 @@ addTopNSlider = function(){
 
     menu.append("input")
         .attr("type", "range")
-        .attr("value", getNumberOfEdges())
+        //.attr("value", getNumberOfEdges())
         .attr("id", "topNThresholdSlider")
         .attr("min","0")
         .attr("max", "20")
@@ -667,8 +668,8 @@ addGroupList = function () {
             });
     menu.append("label")
         .attr("for","anatomy")
-        .text("Anatomy");
-
+        .text("Yeo7");
+/*
     menu.append("br")
 
     menu.append("input")
@@ -701,7 +702,7 @@ addGroupList = function () {
         .text("Rich Club");
 
     menu.append("br");
-
+*/
     /*
     menu.append("input")
         .attr("type", "radio")
@@ -861,7 +862,7 @@ addGeometryRadioButton = function () {
 
     menu.append("label")
         .attr("for","geometry")
-        .text("Topological Space:");
+        .text("Embedded Space:");
     menu.append("br");
 
     menu.append("input")
@@ -875,8 +876,8 @@ addGeometryRadioButton = function () {
         });
     menu.append("label")
         .attr("for","isomap")
-        .text("Isomap");
-
+        .text("gradients");
+/*
     menu.append("br")
 
     menu.append("input")
@@ -908,7 +909,7 @@ addGeometryRadioButton = function () {
     menu.append("label")
         .attr("for","tsne")
         .text("tSNE");
-
+*/
     menu.append("br");
 
     menu.append("input")

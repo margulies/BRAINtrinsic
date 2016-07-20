@@ -126,12 +126,12 @@ setLookUpTable = function (d) {
 
 };
 
-
+/*
 setConnectionMatrix = function(d, name){
     connectionMatrix[name] = d.data;
     console.log("connectionMatrix set");
 };
-
+*/
 
 
 
@@ -306,7 +306,7 @@ getConnectionMatrix = function () {
     //return connectionMatrix;
 };
 
-
+/*
 getConnectionMatrixRow = function(index){
 
     var row = [];
@@ -315,7 +315,7 @@ getConnectionMatrixRow = function(index){
     }
     return row;
 };
-
+*/
 
 getRegionByNode = function (nodeIndex) {
     return groups[activeGroup][nodeIndex];
@@ -375,12 +375,12 @@ setRegionsActivated = function (){
 
 };
 
-
+/*
 getConnectionMatrixDimension = function(){
     return connectionMatrix['isomap'].length;
 }
-
-
+*/
+/*
 getTopConnectionsByNode = function(indexNode, n){
     var row = getConnectionMatrixRow(indexNode);
     var sortedRow = row.sort(function(a, b){return b-a}); //sort in a descending flavor
@@ -392,8 +392,8 @@ getTopConnectionsByNode = function(indexNode, n){
 
     return res;
 }
-
-
+*/
+/*
 getMaximumWeight = function () {
 
     var max = d3.max(connectionMatrix['normal'], function(d){
@@ -404,8 +404,8 @@ getMaximumWeight = function () {
     console.log(max);
     return max;
 };
-
-
+*/
+/*
 getNumberOfEdges = function () {
   return numberOfEdges;
 };
@@ -417,7 +417,7 @@ setNumberOfEdges = function(n){
 
     numberOfEdges = n;
 };
-
+*/
 
 
 createOldGroups = function () {
@@ -455,7 +455,7 @@ createGroups = function () {
         var labelKey = labelKeys[i];
         anatomicalGroup[anatomicalGroup.length] = lookUpTable[labelKey].group;
         placeGroup[placeGroup.length] = lookUpTable[labelKey].place;
-        richClubGroup[richClubGroup.length] = lookUpTable[labelKey].rich_club;
+        //richClubGroup[richClubGroup.length] = lookUpTable[labelKey].rich_club;
         /*if(icColorTable[i]){
             icGroup[icGroup.length] = icColorTable[i][0];
         }*/

@@ -59,9 +59,9 @@ var parse = function(callback){
 }
 
 
-var folder = getQueryVariable("dataset");
-var vr = getQueryVariable("vr");
-var isLoaded = parseInt(getQueryVariable("load"));
+var folder = "Gradient"; //getQueryVariable("dataset");
+var vr = "0"; //getQueryVariable("vr");
+var isLoaded = "0"; // parseInt(getQueryVariable("load"));
 metric = stringToBoolean(getQueryVariable("metric"));
 if( metric == undefined){
     metric = false;
@@ -75,8 +75,8 @@ if(isLoaded == 0) {
         .defer(loadCentroidstSNE)
         .defer(loadLabelKeys)
         .defer(loadLookUpTable)
-        .defer(loadConnections)
-        .defer(loadConnectionsIsomap)
+        //.defer(loadConnections)
+        //.defer(loadConnectionsIsomap)
         .defer(loadCentroidsAnatomy)
         .defer(loadIcColors)
         //.defer(loadColorMap)
@@ -95,21 +95,3 @@ if(isLoaded == 0) {
         })
 }
 
-
-/*
- queue()
- .defer(loadLookUpTable)
- .awaitAll(function(){
- init();
- });
-
-
-init = function () {
-    initGUI();
-};*/
-
-
-/*
- $( document ).ready(function() {
- init();
- });*/

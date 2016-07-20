@@ -8,13 +8,13 @@
 
 var graph;
 var distanceMatrix = [];
-
+/*
 var computeNodalStrength = function (connectionRow) {
     //return d3.mean(connectionRow);
     return d3.sum(connectionRow);
 };
-
-
+*/
+/*
 var computeDistanceMatrix = function(){
     distanceMatrix = [];
     var adjacencyMatrix = getConnectionMatrix();
@@ -32,7 +32,7 @@ var computeDistanceMatrix = function(){
     }
 
 };
-
+*/
 var computeShortestPathDistances = function(rootNode) {
     console.log("computing spt");
     return graph.shortestPath(String(rootNode));

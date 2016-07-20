@@ -241,14 +241,14 @@ initCanvas = function () {
     setRegionsActivated();
 
     //setThreshold(30);
-    computeDistanceMatrix();
+    //computeDistanceMatrix();
     var light;
 
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 3000);
 
-    camera.position.z = 50;
+    camera.position.z = 600;
     spheres = [];
 
     canvas = document.getElementById('canvas');
@@ -332,8 +332,8 @@ initCanvas = function () {
     }
 
 
-    var len = getConnectionMatrixDimension();
-
+    //var len = getConnectionMatrixDimension();
+    var len = labelKeys.length;
     for(var i =0; i < len; i++){
         visibleNodes[visibleNodes.length] = true;
     }
@@ -348,7 +348,7 @@ initCanvas = function () {
     });
     scene.add(light);
 
-    var axisHelper = new THREE.AxisHelper( 5 );
+    var axisHelper = new THREE.AxisHelper( 100 );
     scene.add( axisHelper );
 
     createLegend(activeGroup);
@@ -564,6 +564,8 @@ var drawRegions = function(dataset) {
 
 
 var drawConnections = function () {
+    /*
+    
     var row;
     for(var i= 0; i < nodesSelected.length; i++){
         if(isRegionActive(getRegionByNode(nodesSelected[i]))){
@@ -590,6 +592,7 @@ var drawConnections = function () {
     }
 
     setEdgesColor();
+    */
 };
 
 
@@ -658,10 +661,10 @@ var setEdgesColor = function () {
 };
 
 var drawEdgesGivenNode = function (indexNode) {
-
+/*
     var connectionRow = getConnectionMatrixRow(indexNode);
 
-
+    
     var l = connectionRow.length;
     for(var i=0; i < l ; i++){
         if(connectionRow[i] > getThreshold()  && isRegionActive(getRegionByNode(i)) && visibleNodes[i]) {
@@ -673,6 +676,7 @@ var drawEdgesGivenNode = function (indexNode) {
         }
     }
     setEdgesColor();
+    */
 };
 
 
@@ -881,7 +885,7 @@ changeActiveGeometry = function(n){
     }
 
     updateNeeded = true;
-    computeDistanceMatrix();
+    //computeDistanceMatrix();
 
 
     for(var i=0; i < spheres.length; i++){

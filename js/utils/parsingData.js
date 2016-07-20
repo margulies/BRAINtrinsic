@@ -104,7 +104,7 @@ var loadLabelKeys = function (callback) {
         }
     });
 };
-
+/*
 var loadConnections = function(callback){
     Papa.parse("data/"+folder+"/NW.csv",{
         download: true,
@@ -112,7 +112,7 @@ var loadConnections = function(callback){
         delimiter: ',',
         header: false,
         complete: function(results){
-            setConnectionMatrix(results, 'normal');
+            //setConnectionMatrix(results, 'normal');
             //computeDistanceMatrix();
             callback(null,null);
         }
@@ -126,13 +126,13 @@ var loadConnectionsIsomap = function(callback){
         delimiter: ',',
         header: false,
         complete: function(results){
-            setConnectionMatrix(results, 'isomap');
+            //setConnectionMatrix(results, 'isomap');
             //computeDistanceMatrix();
             callback(null,null);
         }
     })
 };
-
+*/
 
 var loadColorMap = function(callback){
     Papa.parse("data/colorMap.csv", {
